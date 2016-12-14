@@ -24,10 +24,15 @@ console.log(traveler);
 //hunt(traveler);
 
 function makeTraveler (name) {
+    let food = Math.floor(Math.random() * 100);
+    let isHealthy = true;
+    if (food < 20) {
+        isHealthy = false;
+    }
     return {
     name: name,
-    food: Math.floor(Math.random() * 100),
-    isHealthy: true,
+    foods: food,
+    Health: isHealthy,
     }
 };
 
