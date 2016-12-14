@@ -42,8 +42,16 @@ function makeWagon (capacity) {
 
 function hunt (traveler) {
  if (Math.floor(Math.random() * 100) >= 50) {
-     traveler.food + 100;
- }
+     return traveler.food.push(100);
+ }; 
+
+ function eat (traveler) {
+     if (traveler.food < 20) {
+         return traveler.isHealthy(false);
+     }else{
+         return traveler.food(food - 20);
+     }
+ };
 
 
 
@@ -112,3 +120,5 @@ Return true if there is at least one unhealthy person in the wagon. Return false
 food(wagon)
 Return the total amount of food among all occupants of the wagon.
  */
+
+
